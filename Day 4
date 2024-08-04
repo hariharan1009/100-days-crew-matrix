@@ -1,0 +1,30 @@
+The program must accept the time in 24-hour format. The program must print the time in 12-hour format as the output.
+Example Input/Output:
+Input:
+0000
+Output:
+12:00 AM
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int h,m;
+    String p="AM";
+    h=a/100;
+    m=a%100;
+    if(h==0){
+        h=12;
+     }
+    else if(h==12){
+        p=p.replace('A','P');
+    }
+    else if(h>12){
+        h-=12;
+        p=p.replace('A','P');
+    }
+    System.out.printf("%02d:%02d %s",h,m,p);
+	}
+}
