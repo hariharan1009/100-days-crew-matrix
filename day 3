@@ -19,14 +19,14 @@ public class Hello {
 		//Your Code Here
     Scanner sc=new Scanner(System.in);
     int b=sc.nextInt();
-    int a=(b%10);
-    if(a>=0){
+    if(b>=0){
+        int a=(b%10);
         for(int i=1;i<=5;i++){
             System.out.print(a*i +" ");
         }
     }
     
-    else if(a<0) {
+    else  {
         int c=(b%10) *(-1);
         for(int j=1;j<=10;j++){
             System.out.print(c*j +" ");
