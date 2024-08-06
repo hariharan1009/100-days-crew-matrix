@@ -1,1 +1,32 @@
-day5
+Chef defines a pair of positive integers (a, b) to be a Oneful Pair, if
+a+b+(ab) = 111
+For example, (1, 55) is a Oneful Pair, since 1+55+ (155) 56+55 = 111.
+But (1, 56) is not a Oneful Pair, since 1+56+(1.56)=57+56113 / 111.
+Given two positive integers a and b, output Yes if they are a Oneful Pair. And No
+otherwise.
+Input Format
+The only line of input contains two space-separated integers a and b.
+Output Format
+Output Yes, if (a, b) form a Oneful Pair. Output No if they do not.
+
+solution:
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef
+{
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c=a+b+(a*b);
+		if(c==111){
+		    System.out.println("Yes");
+		}
+		else{
+		    System.out.println("No");
+		}
+	}
+}
