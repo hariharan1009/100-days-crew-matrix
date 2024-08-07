@@ -1,0 +1,27 @@
+The program must accept three integers as the input. The program must print the sum of the smallest integer and the largest integer as the output.
+Example Input/Output 1:
+Input:
+2 5 3
+Output:
+7
+Example Input/Output 2:
+Input:
+0 1 3
+Output:
+3
+
+
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    int c=sc.nextInt();
+    
+    System.out.println(Math.min(Math.min(a,b),c)+Math.max(Math.max(a,b)),c);
+	}
+}
