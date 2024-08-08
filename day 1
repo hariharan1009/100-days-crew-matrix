@@ -15,7 +15,6 @@ Output
 6
 
 SOLUTION:
-// Debug the code below to solve the problem
 import java.util.Scanner;
 
 class Codechef
