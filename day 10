@@ -1,1 +1,40 @@
+In Chefland, everyone who earns strictly more than 
+Y
+Y rupees per year, has to pay a tax to Chef. Chef has allowed a special scheme where you can invest any amount of money and claim exemption for it.
+ Find the minimum amount of money you have to invest so that you don't have to pay taxes this year.
 
+Sample 1:
+Input
+
+4
+4 2
+8 7
+5 1
+2 1
+Output:
+2
+1
+4
+1
+SOLUTION
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a,b;
+        while(n>0){
+             a=sc.nextInt();
+             b=sc.nextInt();
+            System.out.println(a-b);
+
+             n--;
+        }
+	}
+}
