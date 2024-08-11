@@ -1,1 +1,26 @@
-day 11
+According to a recent survey, Biryani is the most ordered food. Chef wants to learn how to make world-class Biryani from a MasterChef. Chef will be required to attend the MasterChef's classes for 
+X
+X weeks, and the cost of classes per week is 
+Y
+Y coins. What is the total amount of money that Chef will have to pay?
+SOLUTION:
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n>0){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            System.out.println(a*b);
+            n--;
+        }
+	}
+}
