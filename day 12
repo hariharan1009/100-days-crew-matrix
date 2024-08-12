@@ -1,1 +1,82 @@
+Greater Average
+You are given 
+3
+3 numbers 
+A
+,
+B
+,
+A,B, and 
+C
+C.
 
+Determine whether the average of 
+A
+A and 
+B
+B is strictly greater than 
+C
+C or not?
+
+NOTE: Average of 
+A
+A and 
+B
+B is defined as 
+(
+A
++
+B
+)
+2
+2
+(A+B)
+​
+ . For example, average of 
+5
+5 and 
+9
+9 is 
+7
+7, average of 
+5
+5 and 
+8
+8 is 
+6.5
+6.5.
+
+
+
+
+
+
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n>0){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+            float avg=(a+b);
+            if(avg>c*2){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+            n--;
+        }
+	}
+}
