@@ -1,1 +1,36 @@
-day 13
+A new TV streaming service was recently started in Chefland called the Chef-TV.A group of N
+N friends in Chefland want to buy Chef-TV subscriptions. We know that 6 people can share one Chef-TV subscription. Also, the cost of one Chef-TV subscription is X
+X rupees. Determine the minimum total cost that the group of N friends will incur so that everyone in the group is able to use Chef-TV.
+Input
+3
+1 100
+12 250
+16 135
+Output
+100
+500
+405
+
+
+
+
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int a,b,c,ans;
+		Scanner sc= new Scanner(System.in);
+		int t=sc.nextInt();
+		while (t-->0){
+		    a=sc.nextInt();
+		    b=sc.nextInt();
+		    c=Math.floorDiv(a,6);
+		    ans=c;
+		    if (a%6>0){
+		        ans+=1;
+		    }
+		   System.out.println(ans*b);
+		}
+	}
+}
