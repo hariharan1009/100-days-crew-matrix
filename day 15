@@ -1,1 +1,31 @@
+Janmansh has to submit 3 assignments for Chingari before 10 pm and he starts to do the assignments at X pm. Each assignment takes him 1 hour to complete.
+Can you tell whether he'll be able to complete all assignments on time or not?
 
+SOLUTION:
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner  sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n>0){
+            int a=sc.nextInt();
+            if((10-a)>=3){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+            n--;
+        }
+        
+	}
+}
