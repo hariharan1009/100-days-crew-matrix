@@ -1,0 +1,42 @@
+In Chefland, there are X schools, and each school has  Y students.The year end results are in and a total of Z students passed the exams.
+Assuming that all students appeared for the exams, find whether the number of students who passed in Chefland was strictly greater than 50%.
+  Input
+4
+2 10 12
+2 10 3
+1 5 3
+3 6 9
+  Output
+YES
+NO
+YES
+NO
+
+
+
+  import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(SYstem.in);
+        int n=sc.nextInt();
+        while(n>0){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+            int d=(a*b)/2;
+            if(d<c){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+            n--;
+        }
+	}
+}
