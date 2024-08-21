@@ -1,0 +1,41 @@
+Minimum Pizzas
+Each pizza consists of 4 slices. There are N friends and each friend needs exactly X slices.Find the minimum number of pizzas they should order to satisfy their appetite.
+Input
+4
+1 5
+2 6
+4 3
+3 5
+Output
+2
+3
+3
+4
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+ Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n>0){
+         int a=sc.nextInt();
+         int b=sc.nextInt();
+         int x=4;
+         int c=(a*b)/x;
+         if((a*b)%4!=0){
+             System.out.println(c+1);
+         }   
+         else{
+             System.out.println(c);
+         }
+               n--;
+            
+        }
+	}
+}
+
