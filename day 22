@@ -1,0 +1,43 @@
+Let Me Eat Cake! Alice and Bob both bought a full cake each. Alice's cake has  𝐴 A slices, and Bob's cake has  𝐵 B slices. 
+  Alice will be unhappy if she has strictly less slices than Bob does. Similarly, Bob will be unhappy if he has strictly less slices than Alice does. 
+  Charlie doesn t want either of his friends to be unhappy, so he proposes a solution
+  while either Alice or Bob are unhappy, he will attempt to restore happiness by eating half the remaining slices (rounded up) of whoever has more of them. For example, 
+If  𝐴 = 8 A=8 and  𝐵 = 5 B=5, 
+Charlie will eat half of Alice's slices, which is  8 2 = 4 2 8 ​  =4 slices. If  𝐴 = 2 A=2 and  𝐵 = 5 B=5, Charlie will eat half of Bob's slices, which is  5 2 2 5 ​ 
+  slices - rounded up, this is  3 3 slices. How many slices of cake will Charlie eat in total?
+
+
+
+    import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+         while (n > 0) {
+            int a = sc.nextInt();
+		    int b = sc.nextInt();
+		    int c = 0;
+		    while(a!=b){
+		        if(a>b){
+		            int slice=(a+1)/2;
+		            c+=slice;
+		            a-=slice;
+		        }
+		        else if(b>a){
+		            int slice =(b+1)/2;
+		            c+=slice;
+		            b-=slice;
+		        }
+		    }
+		    
+		    System.out.println(c);
+            n--;
+        }
+	}
+}
