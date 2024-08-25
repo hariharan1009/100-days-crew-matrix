@@ -1,0 +1,32 @@
+Election season has started in Chefland and the election commission wants to know the count of eligible voters.
+There are N people in Chefland where the age of the i th person in A [i].Given that a person needs to be at least X years old to vote, find the number of eligible voters.
+
+
+
+
+  import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int c=0;
+            int a=sc.nextInt();
+            int s=sc.nextInt();
+            int[] b=new int[a];
+            for(int i=0;i<a;i++){
+                b[i]=sc.nextInt();
+                if(b[i]>=s){
+                  c++;  
+                }
+            }
+            System.out.println(c);
+        }
+	}
+}
