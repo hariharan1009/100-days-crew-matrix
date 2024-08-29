@@ -1,0 +1,36 @@
+Chess Ratings
+Alice has recently started playing Chess. Her current rating is X. She noticed that when she wins a game, her rating increases by 8 points.
+Can you help Alice in finding out the minimum number of games she needs to win in order to make her rating greater than or equal to Y?
+
+
+
+  import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            int z=y-x;
+            if(x==y){
+                System.out.println("0");
+            }
+            else if(z<=8){
+                System.out.println("1");
+            }
+            else if(z%8==0){
+                System.out.println(z/8);
+            }
+            else{
+                System.out.println((z/8)+1);
+            }
+        }
+	} 
+}
