@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n>0){
+            int a=sc.nextInt();
+            if(a<=100){
+               System.out.println(a);
+            }
+            else if(100<a && a<=1000){
+                System.out.println(a-25);
+            }
+            else if(1000<a && a<=5000){
+                System.out.println(a-100);
+            }
+            else{
+                System.out.println(a-500);
+            }
+            n--;
+            
+        }
+	}
+}
