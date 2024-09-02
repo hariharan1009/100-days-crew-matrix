@@ -1,1 +1,37 @@
-not happy at all see you Tomorrow 
+Chef and Water Bottles
+
+Chef has N empty bottles where each bottle has a capacity of X litres.
+There is a water tank in Chefland having K litres of water. Chef wants to fill the empty
+bottles using the water in the tank.
+
+Assuming that Chef does not spill any water while filling the bottles, find out the
+maximum number of bottles Chef can fill completely.
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int a=sc.nextInt();
+            int x=sc.nextInt();
+            int k=sc.nextInt();
+            if(x>k){
+                System.out.println("0");
+            }
+            else if((k/x)>a){
+                System.out.println(a);
+            }
+            else{
+                System.out.println(k/x);
+            }
+        }
+	}
+}
