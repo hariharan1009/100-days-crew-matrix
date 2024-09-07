@@ -1,0 +1,32 @@
+Distinct Colors
+
+There are N different types of colours numbered from 1 to N. Chef has Aj balls having
+colour i, (1 ≤ i ≤ N).
+
+Chef will arrange some boxes and put each ball in exactly one of those boxes.
+Find the minimum number of boxes Chef needs so that no box contains two balls of
+same colour.
+
+  import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        	Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int a=sc.nextInt();
+            int x[]=new int[a];
+            for(int i=0;i<a;i++){
+                x[i]=sc.nextInt();
+            }
+            Arrays.sort(x);
+            System.out.println(x[a-1]);
+        }
+
+	}
+}
