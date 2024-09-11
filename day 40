@@ -1,1 +1,35 @@
-tired 
+Chessboard Distance
+
+The Chessboard Distance for any two points (X1, Y1) and (X2, Y2) on a Cartesian
+plane is defined as max(| X1 - X2|, | Y1 - Y2|).
+
+You are given two points (X1, Y1) and (X2, Y2). Output their Chessboard Distance.
+
+Note that, | P| denotes the absolute value of integer P. For example, | - 4| = 4 and
+|7|=7.
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+            int d=sc.nextInt();
+            int g=Math.abs(c-a);
+            int e=Math.abs(d-b);
+            System.out.println(Math.max(g,e));
+              
+        }
+	}
+}
