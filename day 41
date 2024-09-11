@@ -1,1 +1,32 @@
-brithday
+X Jumps
+
+Chef is currently standing at stair 0 and he wants to reach stair numbered X.
+
+Chef can climb either Y steps or 1 step in one move.
+Find the minimum number of moves required by him to reach exactly the stair
+numbered X.
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            int z=x%y;
+            if(x%y==0){
+                System.out.println(x/y);
+            }
+            else{
+                System.out.println(z+(x/y));
+            }
+        }
+	}
+}
