@@ -1,0 +1,49 @@
+Water Mixing
+
+Chef is setting up a perfect bath for himself. He has X litres of hot water and Y litres
+of cold water.
+
+The initial temperature of water in his bathtub is A degrees. On mixing water, the
+temperature of the bathtub changes as following:
+· The temperature rises by 1 degree on mixing 1 litre of hot water.
+. The temperature drops by 1 degree on mixing 1 litre of cold water.
+
+Determine whether he can set the temperature to B degrees for a perfect bath.
+
+  import java.util.*;
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int a=sc.nextInt();
+		    int b=sc.nextInt();
+		    int x=sc.nextInt();
+		    int y=sc.nextInt();
+		    
+		    if(a<=b){
+		        if(a==b){
+		            System.out.println("Yes");
+		        }
+		        else{
+		            if(x>= Math.abs(a-b)){
+		                System.out.println("Yes");
+		            }
+		            else{
+		                System.out.println("No");
+		            }
+		            
+		        }
+		    }else{
+		        if(y>= Math.abs(a-b)){
+		            System.out.println("Yes");
+		        }else{
+		            System.out.println("No");
+		        }
+		    }
+		}
+	}
+}
+
