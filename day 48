@@ -1,0 +1,36 @@
+
+Minimum number of coins
+
+Chef has infinite coins in denominations of rupees 5 and rupees 10.
+
+Find the minimum number of coins Chef needs, to pay exactly X rupees. If it is
+impossible to pay X rupees in denominations of rupees 5 and 10 only, print -1.
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int x=sc.nextInt();
+             if(x%10==0){
+                 System.out.println(x/10);
+             }
+             else if(x%5==0){
+                 System.out.println(x/5-x/10);
+             }
+             else{
+                 System.out.println("-1");
+             }
+            
+        }
+	}
+}
