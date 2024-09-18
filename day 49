@@ -1,0 +1,48 @@
+//my frist linkedlist problem
+Remove Duplicates from Sorted List
+
+You are given head of the non-empty sorted linked list where the value of the ith node
+will be Ai.
+
+Your task is to delete all duplicates such that each element appears only once and
+return the linked list sorted.
+
+Input:
+
+. First line will contain T, number of test cases. Then the test cases follow.
+· The first line contains one integer N - the length of the linked list.
+. The second line contains N space separated integers A1, A2, ... AN - the value of
+the linked list nodes starting from the head for the linked list.
+
+
+
+  /* Linked List Node
+struct Node {
+    int data;
+    struct Node next;
+    Node(int x) {
+        data = x;
+        next = null;
+    }
+}; */
+
+class Solution {
+    Node removeDuplicates(Node head) {
+        // your code here
+        Node a=head;
+        while(a.next!=null){
+           if(a.data==a.next.data){
+                if(a.next.next==null){
+                    a.next=null;
+                    return head;
+                }
+                else{
+                    a.next = a.next.next;
+                    continue;
+                }
+            }
+            a = a.next;
+        }
+        return head;
+    }
+};
