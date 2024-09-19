@@ -1,0 +1,40 @@
+Airlines
+
+An airline operates X aircraft every day. Each aircraft can carry up to 100 passengers.
+One day, N passengers would like to travel to the same destination. What is the
+minimum number of new planes that the airline must buy to carry all N passengers?
+
+Input Format
+
+. The first line of input will contain a single integer T, denoting the number of test
+cases.
+
+. Each test case consists of a single line containing two space-separated integers X
+and N - the number of aircraft the airline owns and the number of passengers
+travelling, respectively.
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            int t=x*100;
+            if(t>y){
+                System.out.println("0");
+            }
+            else{
+                System.out.println(((y-t)+99)/100);
+            }
+        }
+
+	}
+}
