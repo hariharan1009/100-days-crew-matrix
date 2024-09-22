@@ -1,0 +1,25 @@
+Input: n = 5, arr[] = [2, 3, 2, 3, 5], p = 5
+Output: [0, 2, 2, 0, 1]
+
+
+class Solution {
+    // Function to count the frequency of all elements from 1 to N in the array.
+    public static void frequencyCount(int arr[], int N, int P) {
+        // do modify in the given array
+        int[] b=new int[P+1];
+        for(int i=0;i<N;i++){
+            if(arr[i]<=P){
+                b[arr[i]]++;
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+            if (i + 1 <= P) {
+                arr[i] = b[i + 1];  
+            } else {
+                arr[i] = 0;  
+            }
+        }
+        
+    }
+}
