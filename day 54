@@ -1,0 +1,19 @@
+Input: arr = [12, 35, 1, 10, 34, 1]
+Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
+
+class Solution {
+    public int print2largest(int[] arr) {
+        // Code Here
+        Arrays.sort(arr);
+        int n=arr.length;
+        int s=-1;
+        for(int i=n-1;i>0;i--){
+            if(arr[i]!=arr[i-1]){
+                s=arr[i-1];
+                break;
+            }
+        }
+        return s;
+    }
+}
