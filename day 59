@@ -1,0 +1,29 @@
+Given an integer K and a queue of integers, we need to reverse the order of the first K elements of the queue, leaving the other elements in the same relative order.
+Input:
+5 3
+1 2 3 4 5
+Output: 
+3 2 1 4 5
+Explanation: 
+After reversing the given
+input from the 3rd position the resultant
+output will be 3 2 1 4 5.
+class GfG {
+    // Function to reverse first k elements of a queue.
+    public Queue<Integer> modifyQueue(Queue<Integer> q, int k) {
+        // add code here.  
+        int n=q.size();
+        Stack<Integer> s= new Stack<>();
+      
+        for(int i=0;i<k;i++){
+            s.push(q.poll());
+        }
+        for(int i=0;i<k;i++){
+            q.offer(s.pop());
+        }
+        for(int i=0;i<n-k;i++){
+            q.offer(q.poll());
+        }
+        return q;
+    }
+}
