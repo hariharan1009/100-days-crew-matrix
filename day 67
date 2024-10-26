@@ -1,0 +1,27 @@
+we will learn how to print days of week in words using if else ladder statement. We will take a number between 1 to 7 as input from user, where 1 corresponds to Monday, 2 corresponds to Tuesday and so on. We will use if else ladder statement to print name of day in words
+
+1 - Sunday 2 - Monday 3 - Tuesday 4 - Wednesday 5 - Thursday 6 - Friday 7 - Saturday lesser than 1 or more than 7 - Invalid day
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        String[] a={"Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n>=1 &&n<=7){
+            System.out.println(a[n-1]);
+}
+        else{
+            System.out.println("Invalid day");
+        }
+    }
+}
