@@ -1,0 +1,63 @@
+Write a program to find given a specic date ,check whether the date is valid or not. Year will be in range 1900 to 9999
+
+Input Format
+
+INT INT INT Accept three integer as a input
+
+Constraints
+
+NULL
+
+Output Format
+
+Print the date is valid or not
+
+Sample Input 0
+
+08/16/2000
+Sample Output 0
+
+Invalid
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String[] da=s.split("/");
+        int d=Integer.parseInt(da[0]);
+        int m=Integer.parseInt(da[1]);
+        int y=Integer.parseInt(da[2]);
+        if(y>=1900 && y<=9999 && m>=1 &&m<=12){
+            
+            if(d>=1&&d<=31&&(m==1||m==3||m==5||m==7|m==8||m==10||m==12)){
+                  System.out.println("Valid");
+            }
+            else if(d>=1&&d<=30&& (m==4||m==6||m==9||m==11)) {
+                System.out.println("Valid");
+            }
+            else if(d>=1&&d<=28&&m==2){
+                System.out.println("Valid");
+            }
+            else if(d==29&&m==2&& ((y%4==0 && y%100!=0)|| y%400==0)){
+                System.out.println("Valid");
+
+            }
+            else{
+                System.out.println("Invalid");
+            }
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+}
+
+
+
+
