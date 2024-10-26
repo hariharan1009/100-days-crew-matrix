@@ -1,0 +1,33 @@
+Find whether the given number is amicable pair or not.(sum of factors of first number equals to the 2nd number as well as sum of factors of 2nd number equal to first number)
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+     public static int am(int n) {
+        int s = 0;
+        for (int i=1;i<=n/2;i++) {
+            if (n%i==0) {
+                s+=i;
+            }
+        }
+        return s;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        if (am(a)==b&&am(b)==a) {
+            System.out.println("Amicable Pair"); 
+        } else {
+            System.out.println("Not a Amicable Pair");
+        }
+    }
+}
