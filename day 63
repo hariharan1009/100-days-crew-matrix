@@ -1,0 +1,41 @@
+Given 2 numbers, print the rst number as a 5-digit number and print the second number in the next line with 5 width space
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int t=a;
+        int t2=b;
+        int c=0,c1=0;
+        while(a>0){
+            c++;
+            a/=10;
+        }
+        while(b>0){
+            c1++;
+            b/=10;
+        }
+        c=5-c;
+        c1=5-c1;
+        for(int i=0;i<c;i++){
+             System.out.print("0");
+        }
+        System.out.print(t);
+        System.out.print("\n");
+        for(int i=0;i<c1;i++){
+             System.out.print(" ");
+        }
+        System.out.print(t2);
+    }
+}
