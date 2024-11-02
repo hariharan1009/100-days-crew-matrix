@@ -1,1 +1,35 @@
-jsje
+Get Lowest Free
+Chef goes to the supermarket to buy some items. Luckily there's a sale going on under which Chef gets the following offer:
+
+If Chef buys 3 items then he gets the item (out of those 3 items) having the lowest price as free.
+Input
+
+3
+6 2 4
+3 3 3
+8 4 4
+output
+10
+6
+12
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+         Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        while(n-->0){
+          int a=sc.nextInt();
+          int b=sc.nextInt();
+          int c=sc.nextInt();
+          int d=Math.min(a,Math.min(b,c));
+          System.out.println(a+b+c-d);
+        }
+	}
+}
