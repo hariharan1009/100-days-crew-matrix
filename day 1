@@ -1,5 +1,4 @@
 You are given a program in the IDE which is trying to do the following
-
 Accepts the count of test cases - t - in the 1st line
 Each line of test case consists of an integer N
 For each test case, it is supposed to print double the integer N as the output
