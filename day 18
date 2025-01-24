@@ -2,7 +2,6 @@ Recently Chef joined a new company. In this company, the employees have to work 
   Friday is called Chill Day — employees only have to work for Y hours (Y<X) on Friday. Saturdays and Sundays are holidays.
 
 Determine the total number of working hours in one week.
-
   import java.util.*;
 import java.lang.*;
 import java.io.*;
